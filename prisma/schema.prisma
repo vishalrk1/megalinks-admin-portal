@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Animepack {
+  id          String   @id @default(uuid())
+  label       String
+  description String
+  packUrl     String
+  categoryId  String
+  isFeatured  Boolean  @default(false)
+  isApproved  Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  Category    Category @relation(fields: [categoryId], references: [id])
+}
+
+model Category {
+  id              String      @id @default(uuid())
+  name            String
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  imageUrl        String      @default("")
+  bannerImageName String      @default("")
+  Animepack       Animepack[]
+  Feedback        Feedback[]
+  Scenepack       Scenepack[]
+  Tutorial        Tutorial[]
+}
+
+model EditingTool {
+  id        String     @id @default(uuid())
+  title     String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  Tutorial  Tutorial[]
+}
+
+model Feedback {
+  id         String   @id @default(uuid())
+  message    String
+  userName   String
+  isFeatured Boolean  @default(false)
+  categoryId String
+  Category   Category @relation(fields: [categoryId], references: [id])
+}
+
+model Scenepack {
+  id         String   @id @default(uuid())
+  label      String
+  packUrl    String
+  imageUrl   String
+  credit     String
+  categoryId String
+  isFeatured Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  isApproved Boolean  @default(false)
+  Category   Category @relation(fields: [categoryId], references: [id])
+}
+
+model Tutorial {
+  id            String      @id @default(uuid())
+  label         String
+  ytUrl         String
+  categoryId    String
+  editingToolId String
+  isFeatured    Boolean     @default(false)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  isApproved    Boolean     @default(true)
+  Category      Category    @relation(fields: [categoryId], references: [id])
+  EditingTool   EditingTool @relation(fields: [editingToolId], references: [id])
+}

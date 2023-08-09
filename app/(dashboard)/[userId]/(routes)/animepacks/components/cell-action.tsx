@@ -22,7 +22,7 @@ export const CellAction: React.FC<CellActionProps> = ({
 
     // function to copy
     const onCopy = (animepackId: string) => {
-        navigator.clipboard.writeText(scenepackId);
+        navigator.clipboard.writeText(animepackId);
         toast.success("Scenepack ID copied to clipboard");
     }
 

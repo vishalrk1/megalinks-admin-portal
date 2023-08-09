@@ -21,8 +21,8 @@ export const CellAction: React.FC<CellActionProps> = ({
     const [open, setOpen] = useState(false);
 
     // function to copy
-    const onCopy = (scenepackId: string) => {
-        navigator.clipboard.writeText(scenepackId);
+    const onCopy = (tutorialId: string) => {
+        navigator.clipboard.writeText(tutorialId);
         toast.success("Scenepack ID copied to clipboard");
     }
 

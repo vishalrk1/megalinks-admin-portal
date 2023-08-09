@@ -5,19 +5,20 @@ import { redirect } from 'next/navigation';
 
 export default async function DashboardLayout({
     children,
+    params
 }: {
     children: React.ReactNode;
+    params: {userId: string}
 }) {
-    const { userId } = auth();
 
-    if (!userId) {
+    if (!params.userId) {
         redirect('/sign-in');
     }
 
     const categories = await prismadb.category.findMany();
 
     if (!categories) {
-        redirect(`/${userId}`);
+        redirect(`/${params.userId}`);
     }
 
     return (

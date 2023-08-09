@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CategoryColumn } from "./columns";
+import { ScenepackColumn } from "./columns";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Copy, Edit, MoreHorizontal, Trash } from "lucide-react";
 import { toast } from "react-hot-toast";

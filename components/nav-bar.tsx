@@ -4,7 +4,7 @@ import { MainNav } from "@/components/main-nav";
 import { ModeToggle } from "@/components/theme-toggle";
 import { redirect } from "next/navigation";
 
-const Navbar = async () => {
+const Navbar = () => {
   const { userId } = auth();
 
   if (!userId) {

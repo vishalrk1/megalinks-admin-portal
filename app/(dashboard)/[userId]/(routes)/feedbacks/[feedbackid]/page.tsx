@@ -4,11 +4,11 @@ import FeedbackForm from './components/feedback-form';
 
 const FeedbackPage = async ({
     params,
-}: {params: {userId: string, feedbackId: string}}) => {
+}: {params: {userId: string, feedbackid: string}}) => {
     const categories = await prismadb.category.findMany();
     const feedback = await prismadb.feedback.findUnique({
         where: {
-            id: params.feedbackId,
+            id: params.feedbackid,
         }
     });
 

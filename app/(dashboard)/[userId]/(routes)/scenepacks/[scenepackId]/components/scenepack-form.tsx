@@ -48,7 +48,7 @@ const ScenepackForm: React.FC<ScenepackFormProps> = ({
 
   const title = initialData ? 'Edit Scenepack' : 'Create Scenepack';
   const description = initialData ? 'Edit a Scenepack' : 'Create a New Scenepack';
-  const toastMessage = initialData ? 'Scenepack Created' : 'Scenepack Updated';
+  const toastMessage = !initialData ? 'Scenepack Created' : 'Scenepack Updated';
   const action = initialData ? 'Save Changes' : 'Create';
 
   const form = useForm<ScenepackFormValues>({

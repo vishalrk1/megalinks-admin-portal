@@ -50,7 +50,7 @@ const TutorialForm: React.FC<TutorialFormProps> = ({
   const title = initialData ? 'Edit Tutorial' : 'Create Tutorial';
   const description = !initialData ? 'Edit a Tutorial' : 'Create a New Tutorial';
   const toastMessage = !initialData ? 'Tutorial Created' : 'Tutorial Updated';
-  const action = !initialData ? 'Save Changes' : 'Create';
+  const action = initialData ? 'Save Changes' : 'Create';
 
   const form = useForm<TutorialFormValues>({
     resolver: zodResolver(formSchema),

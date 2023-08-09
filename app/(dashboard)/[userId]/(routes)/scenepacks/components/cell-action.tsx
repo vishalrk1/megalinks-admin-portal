@@ -9,7 +9,7 @@ import axios from "axios";
 import { AlertModal } from "@/components/modals/alert-modal";
 
 interface CellActionProps {
-    data: CategoryColumn
+    data: ScenepackColumn
 }
 
 export const CellAction: React.FC<CellActionProps> = ({

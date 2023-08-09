@@ -6,12 +6,6 @@ import { redirect } from "next/navigation";
 import prismadb from "@/lib/prismadb";
 
 const Navbar = async () => {
-  const { userId } = auth();
-
-  if (!userId) {
-    redirect("/sign-in");
-  }
-
   return (
     <div className="border-b">
       <div className="flex h-16 items-center px-4">

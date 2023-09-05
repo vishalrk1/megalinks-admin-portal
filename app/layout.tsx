@@ -5,7 +5,7 @@ import { ModalProvider } from "@/provider/modal-provider";
 import { ToasterProvider } from '@/provider/toast-provider';
 import { ThemeProvider } from "@/provider/theme-provider"
 
-const font = Poppins({weight: "400"}); // Inter({ subsets: ["latin"] });
+const font = Poppins({weight: "400", subsets: ["latin"]}); // Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Megalinks admin Dashboard",

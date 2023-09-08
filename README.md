@@ -13,13 +13,14 @@ Admin portal for movies, anime scenepack sharing app
 
 ![alt text](screenshots/img-1.png)
 ![alt text](screenshots/img-2.png)
+![alt text](screenshots/img-7.png)
+![alt text](screenshots/img-8.png)
+![alt text](screenshots/img-9.png)
 ![alt text](screenshots/img-3.png)
 ![alt text](screenshots/img-4.png)
 ![alt text](screenshots/img-5.png)
 ![alt text](screenshots/img-6.png)
-![alt text](screenshots/img-7.png)
-![alt text](screenshots/img-8.png)
-![alt text](screenshots/img-9.png)
+
 
 ## Contact Me
 

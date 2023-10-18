@@ -60,11 +60,10 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({
 
     const onSubmit = async (data: FeedbackFormValues) => {
         try {
-
             setLoading(true);
 
             if (initialData) {
-                await axios.patch(`/api/${params.userId}/feedbacks/${params.feedbackId}`, data);
+                await axios.patch(`/api/${params.userId}/feedbacks/${params.feedbackid}`, data);
             } else {
                 await axios.post(`/api/${params.userId}/feedbacks`, data);
             }

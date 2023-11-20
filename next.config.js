@@ -8,6 +8,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://megalinks-admin-portal-o19h7snq5-vishalrk1.vercel.app/api/:path*',
+      },
+    ]
+  },
   async headers() {
     return [
       {
